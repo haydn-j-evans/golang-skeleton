@@ -4,10 +4,11 @@ import (
 	"flag"
 	"fmt"
 
+	featureflags "github.com/haydn-j-evans/go-skeleton/pkg/flags"
 	"github.com/haydn-j-evans/go-skeleton/pkg/options"
 )
 
-const defaultOptionsFile string = "./config/options.yaml"
+const defaultOptionsFile string = ""
 
 func main() {
 
@@ -16,6 +17,9 @@ func main() {
 
 	appOptions := options.InitOptions(configFile)
 
-	appOptions.FeatureFlags.mutex.Rlock
+	flags := featureflags.InitFeatureFLags()
+
+	featureflags.WatchFeatureFlags(flags)
+
 	fmt.Println(*appOptions)
 }

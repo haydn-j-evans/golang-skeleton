@@ -37,8 +37,6 @@ func InitOptions(configFile *string) *options {
 		Addr: ":8081",
 	}
 
-	options.FeatureFlags.FeatureFlagMap = make(map[string]string)
-
 	options.Logging.FormatterType = "textFormatter"
 
 	options.Logging.ReportCaller = false
