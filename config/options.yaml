@@ -1,0 +1,6 @@
+server:
+  addr: 7000
+featureflags:
+  featureflag: false
+  exportToArvato: true
+  secondFlag: "arvato"
